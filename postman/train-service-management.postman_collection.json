@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "94b75aed-8d97-46f4-8263-332d2bee8f2f",
+		"name": "train-service-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33330101"
+	},
+	"item": [
+		{
+			"name": "station",
+			"item": [
+				{
+					"name": "localhost:5000/api/stations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/stations",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/stations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTBiYmZhZTI2YWE4OTRiYzlkMDIyNyIsImlhdCI6MTcyOTE0OTk0NiwiZXhwIjoxNzI5MTUzNTQ2fQ.WayFaDC8UBuSk5gf0XybY6p_7wKzluYdgIp5GVQw_V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"cantonment Station\",\r\n  \"location\": \"dhaka\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/stations",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/stations/67108b3afd60f3dbadc5e2a0",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/stations/67108b3afd60f3dbadc5e2a0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"67108b3afd60f3dbadc5e2a0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "train",
+			"item": [
+				{
+					"name": "localhost:5000/api/trains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/trains",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"trains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/trains",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTBiYWJmZTI2YWE4OTRiYzlkMDFmZCIsImlhdCI6MTcyOTE2MDkwMCwiZXhwIjoxNzI5MTY0NTAwfQ.27c2V3_K5sn8ncZLWEC2HNaU4nBGVUKdIhz32iXwKog",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"barendra express\",\r\n    \"stations\":[\"6710beffe26aa894bc9d027e\",\"6710bf0fe26aa894bc9d0281\",\"6710bedae26aa894bc9d0278\",\"6710bef0e26aa894bc9d027b\",\"6710bf33e26aa894bc9d0284\",\"6710bf3fe26aa894bc9d0287\",\"6710bf4de26aa894bc9d028a\"],\r\n    \"seatsAvailable\":700\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/trains",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"trains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/trains/67109f771cf300e1db6118c7",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/trains/67109f771cf300e1db6118c7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"trains",
+								"67109f771cf300e1db6118c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "localhost:5000/api/tickets/purchase",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTA4OGVhZmQ2MGYzZGJhZGM1ZTI5NiIsImlhdCI6MTcyOTE0MTk1OCwiZXhwIjoxNzI5MTQ1NTU4fQ.AoQoo94RPeeZkYb8QAGuaxN9gKY7_0SegREMiR8A044",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"trainId\":\"67109f771cf300e1db6118c7\",\r\n  \"stations\": [\"67108b77fd60f3dbadc5e2a9\",\r\n        \"67109ce0fd60f3dbadc5e2bc\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tickets/purchase",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tickets",
+								"purchase"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "localhost:5000/api/wallet/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTBiYmZhZTI2YWE4OTRiYzlkMDIyNyIsImlhdCI6MTcyOTE0OTk0NiwiZXhwIjoxNzI5MTUzNTQ2fQ.WayFaDC8UBuSk5gf0XybY6p_7wKzluYdgIp5GVQw_V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:5000/api/wallet/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"wallet",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/wallet/add-funds",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTBiYmZhZTI2YWE4OTRiYzlkMDIyNyIsImlhdCI6MTcyOTE0OTk0NiwiZXhwIjoxNzI5MTUzNTQ2fQ.WayFaDC8UBuSk5gf0XybY6p_7wKzluYdgIp5GVQw_V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":80\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/wallet/add-funds",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"wallet",
+								"add-funds"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "localhost:5000/api/auth/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTBjN2U0MzNkZjhmZTc1MTY0MDBkNyIsImlhdCI6MTcyOTE2MDA5NSwiZXhwIjoxNzI5MTYzNjk1fQ.t77pSlWy7e0q1vQGWYSsJs3ydvsFgrq_LYEPJZqxROk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"noyon@example.com\",\r\n  \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"jibon\",\r\n  \"email\": \"jibon@example.com\",\r\n  \"password\": \"1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
